@@ -16,7 +16,7 @@ object Main extends SwiftBarApp with MenuDsl with HandlerDsl {
     }
   }
 
-  override val appMenu = menu("$pluginName$",textSize = 20) {
+  override val appMenu = menu("$name$",textSize = 20) {
     action("send email", "send-email", Some("abc@xyz.com"), true)
     action("print hello", "print-hello", showTerminal = true)
     text("item 1", font = "Times")
@@ -40,5 +40,5 @@ object Main extends SwiftBarApp with MenuDsl with HandlerDsl {
     }
   }
 
-  def sendEmail(email: String) = println(s"email sent to $email")
+  def sendEmail(email: String) = println(s"email sent to \$email")
 }

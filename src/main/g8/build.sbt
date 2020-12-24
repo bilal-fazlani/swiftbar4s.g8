@@ -12,7 +12,7 @@ inThisBuild(
 
 lazy val root = (project in file(".")).
   settings(
-    name := "$pluginName$".replace(" ",""),
+    name := "$name$",
     libraryDependencies ++= Seq(
       Libs.swiftbar4s,
       Libs.munit % Test
