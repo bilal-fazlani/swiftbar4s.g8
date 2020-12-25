@@ -4,8 +4,7 @@ inThisBuild(
   Seq(
     scalaVersion := "$scalaVersion$",
     organization := org,
-    testFrameworks += TestFramework("munit.Framework"),
-    resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+    testFrameworks += TestFramework("munit.Framework")
   )
 )
 

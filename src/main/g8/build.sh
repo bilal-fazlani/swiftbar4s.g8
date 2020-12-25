@@ -12,7 +12,6 @@ OUTPUT_DIR="."
 
 #OTHERS
 PLUGIN_FILENAME="\$PLUGIN_NAME.\$REFRESH"
-COURSIER_REPOSITORIES="ivy2Local|central|sonatype:releases|jitpack|sonatype:snapshots"
 
 rm -rf ~/.ivy2/local/"\$ORG"/"\$PLUGIN_NAME"_"\$SCALA_VERSION"/
 PUBLISH_PLUGIN="true" sbt ";clean ;publishLocal"
