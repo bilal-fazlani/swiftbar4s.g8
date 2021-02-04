@@ -1,10 +1,10 @@
 package $package$
 
-import com.bilalfazlani.swiftbar4s.SwiftBarApp
+import com.bilalfazlani.swiftbar4s._
 import com.bilalfazlani.swiftbar4s.dsl.HandlerDsl
 import com.bilalfazlani.swiftbar4s.dsl.MenuDsl
 
-object Main extends SwiftBarApp with MenuDsl with HandlerDsl {
+object Main extends Plugin with MenuDsl with HandlerDsl {
   
   override val handler = handler {
     handle("send-email") { emailMayBe =>

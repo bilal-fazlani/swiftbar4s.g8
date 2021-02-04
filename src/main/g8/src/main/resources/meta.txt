@@ -1,0 +1,12 @@
+# <bitbar.title>$name$</bitbar.title>
+# <bitbar.version>$version$</bitbar.version>
+# <bitbar.author>$authorName$</bitbar.author>
+# <bitbar.author.github></bitbar.author.github>
+# <bitbar.desc>$pluginDescription$</bitbar.desc>
+# <bitbar.dependencies></bitbar.dependencies>
+# <bitbar.abouturl></bitbar.abouturl>
+# <swiftbar.hideAbout>false</swiftbar.hideAbout>
+# <swiftbar.hideRunInTerminal>false</swiftbar.hideRunInTerminal>
+# <swiftbar.hideLastUpdated>false</swiftbar.hideLastUpdated>
+# <swiftbar.hideDisablePlugin>false</swiftbar.hideDisablePlugin>
+# <swiftbar.hideSwiftBar>false</swiftbar.hideSwiftBar>

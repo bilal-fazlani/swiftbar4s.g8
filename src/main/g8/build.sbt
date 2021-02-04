@@ -4,6 +4,8 @@ inThisBuild(
   Seq(
     scalaVersion := "$scalaVersion$",
     organization := org,
+    version := "$version$",
+    resolvers += Resolver.JCenterRepository,
     testFrameworks += TestFramework("munit.Framework")
   )
 )
