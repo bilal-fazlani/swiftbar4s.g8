@@ -31,4 +31,4 @@ jobs:
     - name: Build plugin
       run: |
         cd target/sbt-test/swiftbar4s.g8/scripted/
-        bash build.sh -xe
+        bash -xe build.sh
