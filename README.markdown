@@ -1,5 +1,7 @@
 A [Giter8][g8] template for [swiftbar4s](https://github.com/bilal-fazlani/swiftbar4s)
 
+![Build](https://github.com/bilal-fazlani/swiftbar4s.g8/workflows/Build/badge.svg)
+
 Template license
 ----------------
 Written in 2020 by Bilal Fazlani
