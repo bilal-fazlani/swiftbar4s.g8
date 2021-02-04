@@ -16,7 +16,7 @@ META_PATH="./src/main/resources/meta.txt"
 # ----------- PUBLISHING PLUGIN -------------------------
 rm -rf ~/.ivy2/local/"\$ORG"/"\$PLUGIN_NAME"_"\$SCALA_VERSION"/
 sbt "publishLocal"
-coursier bootstrap -f -o "\$PLUGIN_PATH" --standalone "\$ORG":"\$PLUGIN_NAME"_"\$SCALA_VERSION":"\$PLUGIN_VERSION"
+cs bootstrap -f -o "\$PLUGIN_PATH" --standalone "\$ORG":"\$PLUGIN_NAME"_"\$SCALA_VERSION":"\$PLUGIN_VERSION"
 chmod +x "\$PLUGIN_PATH"
 # ----------- PUBLISHING PLUGIN END ---------------------
 
