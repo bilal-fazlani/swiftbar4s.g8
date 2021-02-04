@@ -25,7 +25,7 @@ jobs:
         java-version: 11
     - uses: olafurpg/setup-scala@v10
     - name: Install coursier
-    - run: brew install coursier/formulas/coursier
+      run: brew install coursier/formulas/coursier
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
     - name: Build plugin
