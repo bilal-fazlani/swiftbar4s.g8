@@ -23,6 +23,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - uses: olafurpg/setup-scala@v10
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
     - name: Build plugin
