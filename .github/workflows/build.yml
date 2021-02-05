@@ -33,4 +33,4 @@ jobs:
         cd target/sbt-test/swiftbar4s.g8/scripted/
         bash -xe build.sh
     - name: Run plugin
-      run: ./myplugin.5s
+      run: ./target/sbt-test/swiftbar4s.g8/scripted/myplugin.5s
