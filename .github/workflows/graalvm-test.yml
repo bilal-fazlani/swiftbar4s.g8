@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -15,21 +15,16 @@ jobs:
         path: | 
           ~/.ivy2/cache
           ~/.sbt
-    - name: Setup GraalVM environment
-      uses: DeLaGuardo/setup-graalvm@3.1
+          ~/Library/Caches/Coursier
+    - uses: olafurpg/setup-scala@v10
       with:
-        graalvm-version: '21.0.0.java11'                
-    - name: Install native-image component
-      run: gu install native-image
-    - name: Install coursier
-      run: brew install coursier/formulas/coursier
-    - name: Install sbt
-      run: brew install sbt
+        java-version: graalvm@21.0
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
     - name: Build native plugin
       run: |
         cd target/sbt-test/swiftbar4s.g8/scripted/
-        bash -xe build-native.sh
+        sbt nativeImageRunAgent
+        sbt nativeImage
     - name: Run plugin
-      run: ./target/sbt-test/swiftbar4s.g8/scripted/myplugin.5s
+      run: ./target/sbt-test/swiftbar4s.g8/scripted/myplugin
