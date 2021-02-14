@@ -14,10 +14,12 @@ jobs:
         key: ${{ runner.os }}-scala
         path: | 
           ~/.ivy2/cache
-          ~/.sbt      
+          ~/.sbt
+    - name: Setup GraalVM environment
+      uses: DeLaGuardo/setup-graalvm@3.1
+      with:
+        graalvm-version: '21.0.0.java11'                
     - uses: olafurpg/setup-scala@v10
-      with: 
-        java-version: graalvm@
     - name: Install native-image component
       run: gu install native-image
     - name: Install coursier
