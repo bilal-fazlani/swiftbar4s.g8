@@ -10,8 +10,9 @@ inThisBuild(
   )
 )
 
-lazy val root = (project in file(".")).
-  settings(
+lazy val root = (project in file("."))
+  .enablePlugins(NativeImagePlugin)
+  .settings(
     name := "$name;format="camel"$",
     //GRAAL NATIVE IMAGE
     nativeImageOptions ++= List("--initialize-at-build-time", "--no-fallback"),
