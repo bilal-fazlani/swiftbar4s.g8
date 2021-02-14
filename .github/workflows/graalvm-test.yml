@@ -19,11 +19,12 @@ jobs:
       uses: DeLaGuardo/setup-graalvm@3.1
       with:
         graalvm-version: '21.0.0.java11'                
-    - uses: olafurpg/setup-scala@v10
     - name: Install native-image component
       run: gu install native-image
     - name: Install coursier
       run: brew install coursier/formulas/coursier
+    - name: Install sbt
+      run: brew install sbt
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
     - name: Build native plugin
