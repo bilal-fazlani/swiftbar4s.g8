@@ -16,6 +16,7 @@ jobs:
           ~/.ivy2/cache
           ~/.sbt
           ~/Library/Caches/Coursier
+          ~/.cache
     - uses: olafurpg/setup-scala@v10
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
