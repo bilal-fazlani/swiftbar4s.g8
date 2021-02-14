@@ -17,8 +17,6 @@ jobs:
           ~/.sbt
           ~/Library/Caches/Coursier
     - uses: olafurpg/setup-scala@v10
-      with:
-        java-version: graalvm@21.0
     - name: Render plugin
       run: sbt ";clean ;g8Test;"
     - name: Build native plugin

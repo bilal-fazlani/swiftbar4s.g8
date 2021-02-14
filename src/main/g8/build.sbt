@@ -15,7 +15,7 @@ lazy val root = (project in file(".")).
     name := "$name;format="camel"$",
     //GRAAL NATIVE IMAGE
     nativeImageOptions ++= List("--initialize-at-build-time", "--no-fallback"),
-    nativeImageInstalled := true,
+    // nativeImageInstalled := true,
     nativeImageJvm := "graalvm-java11",
     nativeImageVersion := "21.0.0",
     nativeImageOutput := file(name.value),
