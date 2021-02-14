@@ -21,7 +21,7 @@ sbt "publishLocal"
 # ----------- PUBLISHING ARTIFACT END ---------------------
 
 # ------------------ NATIVE -------------------------
-rm -f "$JAR_PATH"
+rm -f "\$JAR_PATH"
 #Create fat JAR
 coursier bootstrap -f -o "\$JAR_PATH" --assembly "\$ORG":"\$PLUGIN_NAME"_"\$SCALA_VERSION":"\$PLUGIN_VERSION" --preamble=false
 #Generate assistive data using agent
@@ -34,5 +34,5 @@ mv "\$TEMP_PLUGIN_PATH" "\$PLUGIN_PATH"
 # ---------------- NATIVE END ------------------------
 
 # ----------- PUBLISHING METADATA -----------------------
-xattr -w "com.ameba.SwiftBar" $(cat "\$META_PATH" | base64) "\$PLUGIN_PATH"
+xattr -w "com.ameba.SwiftBar" \$(cat "\$META_PATH" | base64) "\$PLUGIN_PATH"
 # ----------- PUBLISHING METADATA END -------------------

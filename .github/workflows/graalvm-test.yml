@@ -15,13 +15,11 @@ jobs:
         path: | 
           ~/.ivy2/cache
           ~/.sbt      
-    - name: Setup GraalVM environment
-      uses: DeLaGuardo/setup-graalvm@3.1
-      with:
-        graalvm-version: '21.0.0.java11'
+    - uses: olafurpg/setup-scala@v10
+      with: 
+        java-version: graalvm@
     - name: Install native-image component
       run: gu install native-image
-    - uses: olafurpg/setup-scala@v10
     - name: Install coursier
       run: brew install coursier/formulas/coursier
     - name: Render plugin
